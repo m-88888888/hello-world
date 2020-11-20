@@ -1,4 +1,3 @@
-
 module.exports = {
   env: {
     browser: true,
@@ -18,7 +17,7 @@ module.exports = {
     'prettier',
     'prettier/@typescript-eslint',
     'prettier/react',
-    'prettier/standard'
+    'prettier/standard',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -34,6 +33,7 @@ module.exports = {
     '@typescript-eslint',
     'import',
     'jsx-a11y',
+    'prefer-arrow',
     'prettier',
     'react',
     'react-hooks',
@@ -76,6 +76,14 @@ module.exports = {
         jsx: 'never',
         ts: 'never',
         tsx: 'never',
+      },
+    ],
+    'prefer-arrow/prefer-arrow-functions': [
+      'error',
+      {
+        disallowPrototype: true,
+        singleReturnOnly: false,
+        classPropertiesAllowed: false,
       },
     ],
     'react/jsx-filename-extension': [
